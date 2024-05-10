@@ -5,7 +5,8 @@ import { CreateUserEvent } from './create-user.event';
 
 @Injectable()
 export class AppService {
-  constructor(@Inject('COMMUNICATION') private readonly communicationClient: ClientProxy){}
+  constructor(@Inject('COMMUNICATION') private readonly communicationClient: ClientProxy,
+  @Inject('ANALYTICS') private readonly analyticsClient: ClientProxy){}
   getHello(): string {
     return 'Hello World!';
   }
@@ -16,5 +17,6 @@ export class AppService {
 
     // send user an email, this will go to our communications service
     this.communicationClient.emit('user_created', new CreateUserEvent(createUserRequest.email))
+    this.analyticsClient.emit('user_created', new CreateUserEvent(createUserRequest.email) )
   }
 }
