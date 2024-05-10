@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "5ce880d3-e45b-437e-9b13-1f7de8aee3ab",
+		"name": "microservice #01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10987910",
+		"_collection_link": "https://restless-astronaut-583420.postman.co/workspace/Nestjs-Microservices~064e1a1b-6efb-4e5e-b76d-f57f84862030/collection/10987910-5ce880d3-e45b-437e-9b13-1f7de8aee3ab?action=share&source=collection_link&creator=10987910"
+	},
+	"item": [
+		{
+			"name": "checking communication email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"abhirup4\",\n    \"password\":\"221\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/analytics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/analytics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"analytics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

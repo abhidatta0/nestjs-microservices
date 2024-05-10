@@ -19,4 +19,8 @@ export class AppService {
       timestamp:Date.now()
     })
   }
+
+  getAnalytics(){
+    return this.analytics;
+  }
 }
